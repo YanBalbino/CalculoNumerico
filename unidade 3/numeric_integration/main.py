@@ -1,4 +1,4 @@
-import Trapezoidal
+from numeric_integration.methods import Trapezoidal
 import math
 
 def f(x):
