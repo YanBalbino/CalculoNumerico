@@ -1,3 +1,5 @@
+
+#ver aulas depois
 def method(qt_div, a, b, f):
     h = (b - a) / qt_div
     x = a
