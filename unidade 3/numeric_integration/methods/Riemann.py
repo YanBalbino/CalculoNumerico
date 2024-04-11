@@ -1,5 +1,3 @@
-import math
-import sympy as sp
 
 def method(qt_divisoes, a, b, f):
     h = (b - a) / qt_divisoes
