@@ -1,10 +1,10 @@
 
-def polinomio(x, fx, valor):
+def polynomial(x, fx, valor):
     n = len(x)
     coeficientes = [fx[0]]
 
     for i in range(1, n):
-        coef = diferenca_dividida(x[:i+1], fx[:i+1])
+        coef = diferenca_dividida(x[:i+1], fx[:i+1]) # aplicação da diferença dividida
         coeficientes.append(coef)
 
     resultado = coeficientes[0]
@@ -17,6 +17,8 @@ def polinomio(x, fx, valor):
         resultado += termo
 
     return resultado
+
+# função recursiva que calcula a diferença dividida
 
 def diferenca_dividida(x, fx):
     n = len(x)

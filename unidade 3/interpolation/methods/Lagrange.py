@@ -1,5 +1,5 @@
 
-def polinomio(x, fx, valor): 
+def polynomial(x, fx, valor): 
     qt_pontos = len(x) # número de pontos
     pn_x = 0.0 # resultado do polinômio em x
     
