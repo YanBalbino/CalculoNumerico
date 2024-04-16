@@ -5,8 +5,8 @@ Repositório para os códigos a serem implementados para as aulas de Cálculo Nu
 - Método da Bissecção (√);
 - Método da Falsa Posição (√);
 - Método do Ponto Fixo (√);
-- Método de Newton;
-- Método da Secante.
+- Método de Newton (√);
+- Método da Secante (√).
 
 ## Unidade 2
 
