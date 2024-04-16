@@ -1,8 +1,7 @@
 from math import fabs
 
 
-def method(f, g, a, b, x0, e1, e2):
-
+def method(f, a, b, x0, e1, e2):
     if (x0 < a) or (x0 > b): # se o chute inicial estiver fora do intervalo
         return [None, None]
     
@@ -13,11 +12,18 @@ def method(f, g, a, b, x0, e1, e2):
         return [x0, 1]
     
     k = 1
-    x = g(x0)
+    xk1 = x0 - f(x0) / df_dx(f, x0)
 
-    while (fabs(f(x)) > e1) and (fabs(x - x0) > e2): # enquanto não atingir a precisão
-        x0 = x
-        x = g(x)
+    while (fabs(f(xk1)) > e1) and (fabs(xk1 - x0) > e2):
+        x0 = xk1
+        xk1 = x0 - f(x0) / df_dx(f, x0)
         k += 1
-    
-    return [x, k]
+
+    return [xk1, k]
+
+
+# derivada por diferença finita 'progressiva'
+
+def df_dx(f, x):
+    h = 0.000001 # 10^-6
+    return (f(x + h) - f(x)) / h 
